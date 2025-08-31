@@ -78,6 +78,7 @@ const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
        id="current-video"
        className="size-64 origin-center scale-150 object-cover object-center"
        onLoadedData={handleVidLoad }
+       preload='auto'
       />
     </div>
 </div>

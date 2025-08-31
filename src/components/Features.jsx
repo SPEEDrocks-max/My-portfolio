@@ -60,7 +60,7 @@ const BentoCard = ({src, title, description, isComingSoon , href}) => {
                 {/* This will render a disabled button if isComingSoon is true and there's no href */}
                 {isComingSoon && !href && (
                     <div className="group z-10 relative w-fit cursor-not-allowed overflow-hidden px-7 rounded-full py-3 flex items-center justify-center gap-2 bg-gray-500 text-white font-special mt-5 self-start">
-                        Coming Soon
+                           Coming Soon
                     </div>
                 )}
             </div>
@@ -108,8 +108,7 @@ const Features = () => {
                         ))}
                     </div>
                 }
-             isComingSoon = {true
-             }
+                isComingSoon={false}
 
               />
         </BentoTilt>
@@ -127,7 +126,7 @@ const Features = () => {
                 <BentoCard  
                 src='videos/feature-3.mp4'
                 title={<>TechFi<b/>ndie</>}
-                description="TechFinder is an AI-powered app that connects hackathon enthusiasts with the right teammates by matching skills, interests, and goals—making team formation fast, smart, and effortless."
+                description="TechFindie is an AI-powered app that connects hackathon enthusiasts with the right teammates by matching skills, interests, and goals—making team formation fast, smart, and effortless."
                 // 2. Add the isComingSoon prop here
                 isComingSoon={true}
                 />
