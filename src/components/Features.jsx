@@ -87,11 +87,6 @@ const Features = () => {
                 />
             </BentoTilt>
 
-<BentoTilt className='bento-tilt_1 md:col-span-1 bg-violet-400 h-auto'>
-                <BentoCard 
-                src='/videos/video-6.mp4'
-                />
-            </BentoTilt>
 
 
    
