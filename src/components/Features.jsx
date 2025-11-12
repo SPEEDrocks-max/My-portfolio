@@ -31,7 +31,7 @@ const Features = () => {
            <p className='max-w-md font-circular-web text-lg text-blue-50 opacity-50'>Here are some of the projects I'm proud of. Each one is a unique piece of development and design. There are some more projects shown that i will be deploying very soon! </p>
         </div>
         
-        <BentoTilt className='border-hsla mb-7 h-96 w-full overflow-hidden rounder-md md:h-[65vh] bg-blue-700'>
+        <BentoTilt className='border-hsla mb-7 h-96 w-full overflow-hidden rounder-md md:h-auto bg-blue-700'>
              <BentoCard 
              src = "videos/feature-1.mp4"
              title = {
@@ -57,31 +57,27 @@ const Features = () => {
                 src='videos/feature-2.mp4'
                 title={ <>3d Solar-System</>}
                 // 4. Add the new description and the project link
-                description= "Explore our solar system in an interactive 3D simulation built with Three.js. Navigate through space, view accurate planetary orbits, and click on celestial bodies to learn more about them. More features coming soon!"
-                href="https://solar-system-two-phi.vercel.app/"
+                            href="https://solar-system-two-phi.vercel.app/"
                 />
             </BentoTilt>
-            <BentoTilt className='bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0 bg-white'>
+            <BentoTilt className='bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0 bg-white h-auto'>
                 <BentoCard  
                 src='videos/feature-3.mp4'
                 title={<>Drisht<b/>i AR</>}
-                description="The future of spaces. We transform real-world locations—from college campuses to commercial properties and cultural landmarks—into stunning, photorealistic 3D and AR experiences. It's your world, rebuilt and ready to explore."
-                // 2. Add the isComingSoon prop here
-            
                 isComingSoon={true}
                 />
                
             </BentoTilt>
- <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-red-500'>
+ <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-red-500 h-auto'>
                 <BentoCard 
                 src='videos/feature-4.mp4'
                 title={<>College<b/> In 3D</>}
-                description="Wanna see your college in 3D? Explore a detailed 3D model of our college campus, complete with interactive features and immersive views. Navigate through buildings, view landmarks, and get a feel for the campus layout from anywhere in the world."  
+             
                 isComingSoon={true}
                 />
             </BentoTilt>
 
-            <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-green-500'>
+            <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:h-auto md:me-0 bg-green-500 h-auto'>
                 <BentoCard 
                 className = 'text-black !'
                 src='videos/video-5.mp4'
@@ -91,7 +87,7 @@ const Features = () => {
                 />
             </BentoTilt>
 
-<BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-violet-400'>
+<BentoTilt className='bento-tilt_1 md:col-span-1 bg-violet-400 h-auto'>
                 <BentoCard 
                 src='/videos/video-6.mp4'
                 />
