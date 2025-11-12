@@ -3,72 +3,11 @@ import { TiLocationArrow } from 'react-icons/ti'
 import {FaReact , FaGitAlt , FaJava , FaPython} from 'react-icons/fa'
 import { SiTailwindcss, SiJavascript, SiThreedotjs  } from 'react-icons/si';
 import Button from './Button';
-const BentoTilt = ({children , className = '' }) => {
-    const [transformStyle , setTransformStyle] = useState('')
-    const itemRef = useRef()
-    const handleMouseMove = (e) => {
-   if(!itemRef.current) return;
+import BentoCard from './BentoCard';
+import BentoTilt from './BentoTilt';
 
-   const {height, width, left, top} = itemRef.current.getBoundingClientRect();
-   const relativeX = (e.clientX - left)/width;
-   const relativeY = (e.clientY - top)/height;
-
-   const tiltX = (relativeX - 0.5)*10
-    const tiltY = (relativeY - 0.5)*-10
-     const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(0.95, 0.95, 0.95)`
-setTransformStyle(newTransform)
-    }  
-     
-    const handleMouseLeave = (e) => {
-    setTransformStyle('')
-    } 
-    return (
-        <div className={className} ref={itemRef} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{transform: transformStyle}}>
-            {children}
-
-        </div>
-    )
-
-}
 // 1. Modify BentoCard to render a "Coming Soon" button
-const BentoCard = ({src, title, description, isComingSoon , href}) => {
-    return (
-        <div className='relative size-full'> 
-            
-            <video 
-            src={src}
-            loop
-            autoPlay
-            muted
-            className='absolute left-0 top-0 size-full object-cover object-center'
-            />
-            <div className='relative z-50 size-full flex flex-col justify-between p-5 text-blue-50'>
-                <div>
-                    <h1 className='bento-title special-font '>{title}</h1>
-                    {description && <div className='mt-3 max-w-sm text-xs md:text-base'>{description}</div>  
-                  }
-                    
-                </div>
-                {href && (
-                    <Button
-                        href={href}
-                        title="View Project"
-                        containerClass="bg-white text-black font-special mt-5 self-start"
-                        rightIcon={<TiLocationArrow />}
-                    />
-                )}
-                {/* This will render a disabled button if isComingSoon is true and there's no href */}
-                {isComingSoon && !href && (
-                    <div className="group z-10 relative w-fit cursor-not-allowed overflow-hidden px-7 rounded-full py-3 flex items-center justify-center gap-2 bg-gray-500 text-white font-special mt-5 self-start">
-                           Coming Soon
-                    </div>
-                )}
-            </div>
-         
-
-        </div>
-    )
-}
+<BentoCard />
 
 const Features = () => {
     const techStack = [
@@ -92,7 +31,7 @@ const Features = () => {
            <p className='max-w-md font-circular-web text-lg text-blue-50 opacity-50'>Here are some of the projects I'm proud of. Each one is a unique piece of development and design. There are some more projects shown that i will be deploying very soon! </p>
         </div>
         
-        <BentoTilt className='border-hsla mb-7 h-96 w-full overflow-hidden rounder-md md:h-[65vh] '>
+        <BentoTilt className='border-hsla mb-7 h-96 w-full overflow-hidden rounder-md md:h-[65vh] bg-blue-700'>
              <BentoCard 
              src = "videos/feature-1.mp4"
              title = {
@@ -113,7 +52,7 @@ const Features = () => {
               />
         </BentoTilt>
         <div className='grid h-[135vh] grid-cols-2 grid-rows-3 gap-7 '>
-            <BentoTilt className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
+            <BentoTilt className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 bg-orange-500'>
                 < BentoCard
                 src='videos/feature-2.mp4'
                 title={ <>3d Solar-System</>}
@@ -122,17 +61,18 @@ const Features = () => {
                 href="https://solar-system-two-phi.vercel.app/"
                 />
             </BentoTilt>
-            <BentoTilt className='bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0'>
+            <BentoTilt className='bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0 bg-white'>
                 <BentoCard  
                 src='videos/feature-3.mp4'
-                title={<>TechFi<b/>ndie</>}
-                description="TechFindie is an AI-powered app that connects hackathon enthusiasts with the right teammates by matching skills, interests, and goals—making team formation fast, smart, and effortless."
+                title={<>Drisht<b/>i AR</>}
+                description="The future of spaces. We transform real-world locations—from college campuses to commercial properties and cultural landmarks—into stunning, photorealistic 3D and AR experiences. It's your world, rebuilt and ready to explore."
                 // 2. Add the isComingSoon prop here
+            
                 isComingSoon={true}
                 />
                
             </BentoTilt>
- <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 '>
+ <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-red-500'>
                 <BentoCard 
                 src='videos/feature-4.mp4'
                 title={<>College<b/> In 3D</>}
@@ -140,14 +80,25 @@ const Features = () => {
                 isComingSoon={true}
                 />
             </BentoTilt>
-            <BentoTilt className='bento-tilt_1 row-span-1 col-span-2'>
-                <div className='flex flex-row size-full bg-violet-300 justify-between p-5'>
-                    <h1 className='bento-title special-font text-black max-w-64  '>M<b>o</b>re Co<b>m</b>ing S<b>o</b>on! </h1>
-                    <TiLocationArrow 
-                    className='m-5 scale-[5] self-end '
-                    />
-                </div>
+
+            <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-green-500'>
+                <BentoCard 
+                className = 'text-black !'
+                src='videos/video-5.mp4'
+                title={<>Minecraft for Browser!!</>}
+                description="."  
+                isComingSoon={true}
+                />
             </BentoTilt>
+
+<BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-violet-400'>
+                <BentoCard 
+                src='/videos/video-6.mp4'
+                />
+            </BentoTilt>
+
+
+   
         </div>
 </div>
     </section>

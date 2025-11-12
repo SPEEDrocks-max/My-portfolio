@@ -6,12 +6,14 @@ import Navbar from './components/Navbar'
 import Features from './components/Features'
 import Contact from './components/Contact'
 import ContactPage from './pages/ContactPage'
+import Footer from './components/Footer'
 const HomePage = () => (
   <>
   < Hero />
  < About />
  < Features />
  < Contact />
+ < Footer />
   </>
 )
 const App = () => {

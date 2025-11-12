@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 import { useRef , useState } from 'react';
-import { TiLocation, TiLocationArrow } from 'react-icons/ti';
-import Button from './Button';
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 
