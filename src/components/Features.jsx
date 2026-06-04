@@ -82,7 +82,7 @@ const Features = () => {
                 <BentoCard 
                 src='videos/feature-4.mp4'
                 title={<>Automatic Image to 3D</>}
-                comingSoon={true}
+                isComingSoon={true}
                 />
             </BentoTilt>
 
