@@ -81,7 +81,7 @@ const Features = () => {
             <BentoTilt className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 bg-purple-500 h-auto'>
                 <BentoCard 
                 src='videos/feature-4.mp4'
-                title={<>Automatic Image to 3D Model</>}
+                title={<>Automatic Image to 3D</>}
                 comingSoon={true}
                 />
             </BentoTilt>
