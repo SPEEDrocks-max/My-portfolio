@@ -56,7 +56,7 @@ const Features = () => {
                 < BentoCard
                 src='videos/feature-2.mp4'
                 title={ <>3d Solar-System</>}
-                // 4. Add the new description and the project link
+               
                             href="https://solar-system-two-phi.vercel.app/"
                 />
             </BentoTilt>
@@ -64,26 +64,17 @@ const Features = () => {
                 <BentoCard  
                 src='videos/feature-3.mp4'
                 title={<>Drisht<b/>i AR</>}
-                isComingSoon={true}
+                href="https://drishti-ar-d5d6.vercel.app/"
                 />
                
             </BentoTilt>
- <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0 bg-red-500 h-auto'>
-                <BentoCard 
-                src='videos/feature-4.mp4'
-                title={<>College<b/> In 3D</>}
-             
-                isComingSoon={true}
-                />
-            </BentoTilt>
-
+ 
             <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:h-auto md:me-0 bg-green-500 h-auto'>
                 <BentoCard 
                 className = 'text-black !'
                 src='videos/video-5.mp4'
                 title={<>Minecraft for Browser!!</>}
-                description="."  
-                isComingSoon={true}
+                href="https://minecraft-3.vercel.app/"
                 />
             </BentoTilt>
 
